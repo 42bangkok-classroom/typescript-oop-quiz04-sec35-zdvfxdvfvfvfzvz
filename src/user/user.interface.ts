@@ -1,9 +1,7 @@
-import { Injectable } from "@nestjs/common";
-
-@Injectable()
-export class UserInterface {
-    findAll(): string[] {
-        const data = JSON.parse("/data/users.json")
-        return data.users;
-    }
+export interface IUser {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  username: string;
 }
